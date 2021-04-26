@@ -2,15 +2,201 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ezone</title>
-  </head>
-  
-  <body>
-
-
+    <title>VIDEO-GAMES</title>
+    <link rel="stylesheet" href="style.css">
     
-    <script type="module" src="/main.js"></script>
+  
+  </head>
+  <body>
+    
+    <main>
+      <h1>VIDEO-GAMES</h1>
+      <form>
+        <fieldset>
+          <legend>Add a game</legend>
+          <div class="form_control">
+            
+          <label for="title">Title</label>
+            
+            <input
+              type="text"
+              name="title"
+              id="game_title"
+              placeholder="e.g. World Of Warcraft"
+              minlength="2"
+              required
+              oninvalid="this.setCustomValidity('Enter a valid title here')"
+
+              
+            />
+          <span class="error" hidden>Please provide a game title</span>
+          </div>
+          <div class="form_control">
+          <label for="developer">Developer</label>
+            
+            <input
+              type="text"
+              name="developer"
+              id="game_developer"
+              placeholder="e.g. Blizzard"
+              minlength="2"
+              required
+              oninvalid="this.setCustomValidity('Enter a valid developer here')"
+            />
+           <span class="error" hidden>Please provide a game developer</span>
+          </div>
+          <div class="form_control">
+          <label for="age_rating">Age rating</label>
+            
+            <input
+              type="number"
+              name="age_rating"
+              id="game_age_rating"
+              placeholder="e.g. 16"
+              required
+            />
+          <span class="error" hidden>Please provide an age rating</span>
+          </div>
+          <div class="form_control">
+          <label for="release_date">Release date</label>
+          
+            <input type="date" name="release_date" id="game_release_date" placeholder="yyyy-mm-dd" required/>
+          <span class="error" hidden>Please provide an release date</span>
+          </div>
+          <div class="form_control">
+          <label for="genre">Genre</label>
+            
+            <input
+              type="text"
+              name="genre"
+              id="game_genre"
+              placeholder="e.g. MMO"
+              minlength="2"
+              required
+            />
+          <span class="error" hidden>Please provide a game genre</span>
+          </div>
+
+
+          <div class="form_control">
+            <label for="description">Description</label>
+            <input type="text" name="description" placeholder="Insert description" id="game_description" required>
+            <span class="error" hidden>Please provide a description</span>
+          </div>
+          <div class="form_control">
+          <label for="platforms">Platforms</label>
+            <div class="platforms">
+            <label for="Playstation">
+              Playstation
+            <input
+              type="checkbox"
+              name="platforms"
+              id="game_platforms"
+              value="playstation"
+              
+            />
+            </label>
+            <label for="Xbox">
+              Xbox
+            <input
+              type="checkbox"
+              name="platforms"
+              id="game_platforms"
+              value="xbox"
+            />
+            <label for="PC">
+              PC
+            <input
+              type="checkbox"
+              name="platforms"
+              id="game_platforms"
+              value="pc"
+            />
+          </label>
+          <label for="Nintendo">
+              Nintendo
+            <input
+              type="checkbox"
+              name="platforms"
+              id="game_platforms"
+              value="nintendo"
+            />
+          </div>
+          <span class="error" hidden>Please provide platform(s)</span>
+        </div>
+<div class="form_control">
+          <label for="price">Price</label>
+            
+            <input
+              type="number"
+              name="price"
+              id="game_price"
+              inputmode="numeric"
+              placeholder="e.g. 40"
+              required
+            />
+         <span class="error" hidden>Please provide a price</span>
+          </div>
+          <div class="form_control">
+          <label for="game_mode">
+            <label for="multiplayer">Multiplayer</label>
+              <input
+                type="radio"
+                name="multiplayer"
+                id="game_mode_multiplayer"
+                value="multiplayer"
+              />
+            <label for="singleplayer">Singleplayer</label>
+              
+              <input
+                type="radio"
+                name="multiplayer"
+                id="game_mode_singleplayer"
+                value="singleplayer"
+                checked
+              />
+            <span class="error" hidden>Please provide a game mode</span>
+          </label>
+          </div>
+          <div class="form_control">
+          <label for="metascore">Metascore</label>
+            
+            <input
+              type="number"
+              name="metascore"
+              id="game_metascore"
+              placeholder="e.g. 85"
+              required
+            />
+          <span class="error" hidden>Please provide a Metascore</span>
+          </div>
+          <div class="button_container">
+          <input id="submit_btn" type="submit" value="Add game" />
+       </div> </fieldset>
+        </div>
+      </form>
+
+
+      <button id="add_btn">Add Minecraft</button>
+      <button id="delete_btn">Delete minecraft</button>
+    </main>
+    <template>
+      <article class="container" data-id="">
+        <h2 class="title">Title:</h2>
+        <p class="release_date">Release date:</p>
+        <p class="age_rating">Age rating:</p>
+        <p class="developer">Developer:</p>
+        <p class="price">Price:</p>
+        <p class="description">Description:</p>
+        <p class="platforms">Platforms: </p>
+        <p class="multiplayer">Multiplayer:</p>
+        <p class="metascore">Metascore:</p>
+      </article>
+    </template>
+
+    <script type="module" src="script.js"></script>
   </body>
 </html>
+

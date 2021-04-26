@@ -2,6 +2,7 @@ import "./sass_folder/style.scss";
 
 import { getJSON } from "./rest_actions.js";
 import { post } from "./rest_actions.js";
+import { setUpForm } from "./display_label_data.js";
 
 window.addEventListener("load", init);
 
@@ -24,9 +25,5 @@ async function init() {
     document.querySelector("form").classList.toggle("open");
   });
 
-  setUpForm();
-}
-
-function setUpForm() {
-  console.log("soFarSoGood");
+  setUpForm(types, games, areas);
 }

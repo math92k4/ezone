@@ -6,33 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ezone</title>
     <style>
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
 
       .formwrapper {
         height: 100vh;
         width: 100vw;
         display: flex;
         flex-direction: row-reverse;
-        
       }
 
       form {
-        background-color: #17152B;
+        background-color: #17152b;
         width: 50vw;
         opacity: 0.95;
       }
 
       .progress_pill_container {
         display: flex;
-justify-content: center;
+        justify-content: center;
       }
 
       h2 {
-        color: #FFAC86; 
+        color: #ffac86;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
       }
@@ -45,87 +43,88 @@ justify-content: center;
   <body>
     <button id="cta_btn"></button>
     <div class="formwrapper">
-     <form>
-       <div id="close_btn">X</div>
-       <div class="progress_pill_container">
-         <div class="progress_pill" id="pill_1">
-           <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
-  <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="#B2F6B1"  >
-    <rect width="87" height="21" rx="10.5" stroke="none"/>
-    <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none"/>
-  </g>
-</svg>
-         </div>
-         <div class="progress_pill" id="pill_2">
-           <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
-  <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="none" stroke="#fff" stroke-width="1">
-    <rect width="87" height="21" rx="10.5" stroke="none"/>
-    <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none"/>
-  </g>
-</svg>
-         </div>
-         <div class="progress_pill" id="pill_3">
-           <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
-  <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="none" stroke="#fff" stroke-width="1">
-    <rect width="87" height="21" rx="10.5" stroke="none"/>
-    <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none"/>
-  </g>
-</svg>
-         </div>
-         <div class="progress_pill" id="pill_4">
-           <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
-  <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="none" stroke="#fff" stroke-width="1">
-    <rect width="87" height="21" rx="10.5" stroke="none"/>
-    <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none"/>
-  </g>
-</svg>
-         </div>
-       </div>
-      <fieldset id="list_of_gametypes">
-        <h2 class="fieldset_heading">What types of games do you play?</h2>
-        <template>
-          <div class="formcontrol">
-        <label for=""></label>
-        <input type="checkbox">
+      <form>
+        <div id="close_btn">X</div>
+        <div class="progress_pill_container">
+          <div class="progress_pill" id="pill_1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
+              <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="#B2F6B1">
+                <rect width="87" height="21" rx="10.5" stroke="none" />
+                <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none" />
+              </g>
+            </svg>
+          </div>
+          <div class="progress_pill" id="pill_2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
+              <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="none" stroke="#fff" stroke-width="1">
+                <rect width="87" height="21" rx="10.5" stroke="none" />
+                <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none" />
+              </g>
+            </svg>
+          </div>
+          <div class="progress_pill" id="pill_3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
+              <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="none" stroke="#fff" stroke-width="1">
+                <rect width="87" height="21" rx="10.5" stroke="none" />
+                <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none" />
+              </g>
+            </svg>
+          </div>
+          <div class="progress_pill" id="pill_4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
+              <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" fill="none" stroke="#fff" stroke-width="1">
+                <rect width="87" height="21" rx="10.5" stroke="none" />
+                <rect x="0.5" y="0.5" width="86" height="20" rx="10" fill="none" />
+              </g>
+            </svg>
+          </div>
         </div>
-        </template>
-        <button>Next</button>
-      </fieldset>
+        <fieldset id="list_of_gametypes">
+          <h2 class="fieldset_heading">What types of games do you play?</h2>
+          <template>
+            <div class="formcontrol">
+              <label for=""></label>
+              <input type="checkbox" />
+            </div>
+          </template>
+          <button>Next</button>
+        </fieldset>
 
-      <fieldset id="list_of_games">
-        <h2 class="fieldset_heading">What games do you play?</h2>
-        <template>
-          <div class="form_control">
-        <label for=""></label>
-        <input type="checkbox">
-        </div>
-        </template>
-        <button>Next</button>
-      </fieldset>
+        <fieldset id="list_of_games">
+          <h2 class="fieldset_heading">What games do you play?</h2>
+          <template>
+            <div class="form_control">
+              <label for=""></label>
+              <input type="checkbox" />
+            </div>
+          </template>
+          <button>Next</button>
+        </fieldset>
 
-      <fieldset id="list_of_areas">
-        <h2 class="fieldset_heading">What subjects do you want content on?</h2>
-        <template>
-          <div class="form_control">
-        <label for=""></label>
-        <input type="checkbox">
-        </div>
-        </template>
-        <button>Next</button>
-      </fieldset>
+        <fieldset id="list_of_areas">
+          <h2 class="fieldset_heading">What subjects do you want content on?</h2>
+          <template>
+            <div class="form_control">
+              <label for=""></label>
+              <input type="checkbox" />
+            </div>
+          </template>
+          <button>Next</button>
+        </fieldset>
 
-      <fieldset id="user_information">
-        <h2 class="fieldset_heading">Please type in your informations</h2>
-         <label for="user_fullname"></label>
-         <input type="text" name="user_fullname" required id="user_fullname">
-         <label for="user_mail"></label>
-         <input type="email" name="user_mail" required id="user_mail">
-         <input id="submit_btn" type="submit" value="Submit"/>
-      </fieldset>
-
-
-    </form>
+        <fieldset id="user_information">
+          <h2 class="fieldset_heading">Please type in your informations</h2>
+          <label for="user_fullname"></label>
+          <input type="text" name="user_fullname" required id="user_fullname" />
+          <label for="user_mail"></label>
+          <input type="email" name="user_mail" required id="user_mail" />
+          <button id="submit_btn">Submit</button>
+        </fieldset>
+      </form>
     </div>
+
+    <div id="loading_screen"></div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

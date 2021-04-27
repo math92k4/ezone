@@ -1,20 +1,42 @@
 import "./sass_folder/style.scss";
-
 import { getJSON } from "./rest_actions.js";
 import { post } from "./rest_actions.js";
 import { setUpForm } from "./display_label_data.js";
+import { initialSlideCalc } from "./fieldset_change.js";
+import { slideFieldset } from "./fieldset_change.js";
 
 window.addEventListener("load", init);
 
 async function init() {
-  // prevent all buttons from attempting submit of form
+
+
+  initialSlideCalc(); 
+
+  // prevent all buttons from attempting submit form
   const allBtns = document.querySelectorAll("form button");
   allBtns.forEach((btn) => {
     btn.addEventListener("click", function (event) {
       event.preventDefault();
     });
   });
+  
 
+  // when either a back or next button is clicked
+// run the function calcDistance
+  const nextButtons = document.querySelectorAll(".next");
+    const backButtons = document.querySelectorAll(".back");
+
+  nextButtons.forEach((nxtBtn) => {
+    nxtBtn.addEventListener("click", slideFieldset)
+  }); 
+
+  backButtons.forEach((bckBtn) => {
+    bckBtn.addEventListener("click", slideFieldset);
+  }); 
+  
+
+
+ 
   // fetch content from database and store it in a const
   const games = await getJSON("https://frontendspring2021-a6f0.restdb.io/rest/games");
   const types = await getJSON("https://frontendspring2021-a6f0.restdb.io/rest/types");
@@ -84,3 +106,5 @@ function preparePost() {
 
 
 }
+
+

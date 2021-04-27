@@ -1,15 +1,47 @@
 export function setUpForm(types, games, areas) {
-  const typeField = document.querySelector("#list_of_gametypes");
-  const gameField = document.querySelector("#list_of_games");
-  const areaField = document.querySelector("#list_of_areas");
+  const typeField = document.querySelector(
+    "#list_of_gametypes .checkbox_container"
+  );
+  const gameField = document.querySelector(
+    "#list_of_games .checkbox_container"
+  );
+  const areaField = document.querySelector("#list_of_areas .checkbox_container");
 
   types.forEach((data) => {
     appendData(data.type, typeField);
   });
 
-  games.forEach((data) => {
-    appendData(data.games, gameField);
-  });
+  const typesNextButton = document.querySelector("#list_of_gametypes .next");
+
+  typesNextButton.addEventListener("click", filterGames); 
+
+function filterGames() {
+
+  gameField.innerHTML = ""; 
+
+  const checkedTypes = document.querySelectorAll(
+  "#list_of_gametypes input:checked"
+  );
+  const checkedTypesArr = []; 
+  checkedTypes.forEach((elm) => checkedTypesArr.push(elm.value));
+
+let previousAppendedElm; 
+
+    games.forEach((data) => {
+
+      data.type_of_game.forEach((gameType) => {
+        if (checkedTypesArr.includes(gameType) && previousAppendedElm!= data.games) {
+          previousAppendedElm = data.games; 
+          appendData(data.games, gameField);
+        }
+      });
+        
+      })
+
+
+
+
+  }
 
   areas.forEach((data) => {
     appendData(data.areas, areaField);

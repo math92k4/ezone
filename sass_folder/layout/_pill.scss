@@ -1,0 +1,15 @@
+.progress_pill_container {
+        display: flex;
+        justify-content: center;
+      }
+
+
+.progress_pill {
+    fill: transparent; 
+      &  .shown {
+        fill: #B2F6B1; 
+        transition: fill 3s linear;
+      }}
+
+
+// make as div maybe :)

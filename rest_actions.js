@@ -4,7 +4,7 @@ const headers = {
   "cache-control": "no-cache",
 };
 
-export async function getJSON(url, callback) {
+export async function getJSON(url) {
   const respons = await fetch(url, {
     method: "get",
     headers: headers,
@@ -13,7 +13,7 @@ export async function getJSON(url, callback) {
   return jsonData;
 }
 
-export function post(data) {
+export function post(data, url) {
   const postData = JSON.stringify(data);
   fetch(url, {
     method: "post",

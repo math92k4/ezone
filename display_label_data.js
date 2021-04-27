@@ -20,9 +20,12 @@ function appendData(data, field) {
   const temp = document.querySelector("template");
   const clone = temp.cloneNode(true).content;
   const label = clone.querySelector("label");
+  const input = clone.querySelector("input");
 
   label.textContent = data;
   label.setAttribute("for", data);
+  input.setAttribute("name", data);
+  input.setAttribute("value", data);
 
   field.appendChild(clone);
 }

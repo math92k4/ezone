@@ -99,9 +99,8 @@ function checkFieldsetValidity() {
   console.log(checkedChildInputs.length);
   if (checkedChildInputs.length === 0) {
     isRequired(currentFieldset);
-    currentFieldset.setCustomValidity("Please select at least one field");
+    // currentFieldset.setCustomValidity("Please select at least one field");
     document.querySelector("form").checkValidity();
-    document.querySelector("form").reportValidity();
   } else {
     notRequired(currentFieldset);
     slideFieldset(this);

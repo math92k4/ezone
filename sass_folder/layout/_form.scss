@@ -1,5 +1,5 @@
 .formwrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
 
   min-height: 100vh;
@@ -28,7 +28,7 @@ form {
 .fieldset_slider {
   display: flex;
   transform: translateX(var(--slide-distance));
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.74, 0.01, 0.21, 0.99);
 }
 
 fieldset {
@@ -42,7 +42,7 @@ fieldset {
 
 .checkbox_container {
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 25px;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -56,4 +56,20 @@ fieldset {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+}
+
+.progress_pill {
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--primary-color);
+  margin: 0 30px 40px;
+  border-radius: 50%;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  transition: background-color 0.4s cubic-bezier(0.74, 0.01, 0.21, 0.99);
+
+  &.shown {
+    background-color: var(--primary-color);
+  }
 }

@@ -1,17 +1,6 @@
 .progress_pill_container {
-        display: flex;
-        justify-content: center;
-      }
-
-
-.progress_pill {
-    fill: transparent; 
-    stroke-width: 0;
-      &  .shown {
-        stroke: transparent; 
-        fill: #B2F6B1; 
-        transition: fill 1s linear;
-      }}
-
+  display: flex;
+  justify-content: center;
+}
 
 // make as div maybe :)

@@ -24,7 +24,7 @@ input {
     border-color: red;
   }
 
-  &[type="text"]:valid {
+  &[type="text"]:not(:focus):valid {
     border-color: #b2f6b1;
   }
 
@@ -47,11 +47,11 @@ input {
     border-color: #6e44ff;
   }
 
-  &[type="email"]:not(:placeholder-shown):invalid {
+  &[type="email"]:not(:placeholder-shown):not(:focus):invalid {
     border-color: red;
   }
 
-  &[type="email"]:valid {
+  &[type="email"]:not(:focus):valid {
     border-color: #b2f6b1;
   }
 

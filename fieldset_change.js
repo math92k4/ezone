@@ -17,10 +17,10 @@ export function slideFieldset(that) {
   if (isNext === true) {
     distance += slideDistance;
     fieldsetNumber++;
-    document.querySelector(`#pill_${fieldsetNumber} g`).classList.add("shown");
+    document.querySelector(`#pill_${fieldsetNumber}`).classList.add("shown");
   } else {
     distance -= slideDistance;
-    document.querySelector(`#pill_${fieldsetNumber} g`).classList.remove("shown");
+    document.querySelector(`#pill_${fieldsetNumber}`).classList.remove("shown");
     fieldsetNumber--;
   }
 

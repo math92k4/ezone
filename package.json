@@ -9,5 +9,9 @@
   "devDependencies": {
     "sass": "^1.32.11",
     "vite": "^2.1.5"
+  },
+  "dependencies": {
+    "capitalize-string": "^0.0.4",
+    "string-capitalize-name": "^1.0.3"
   }
 }

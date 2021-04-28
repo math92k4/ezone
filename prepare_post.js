@@ -1,6 +1,7 @@
 "use strict";
 
 import { post } from "./rest_actions.js";
+import stringCapitalizeName from "string-capitalize-name";
 
 export function preparePost() {
   console.log(this);
@@ -28,13 +29,17 @@ export function preparePost() {
     checkedAreas.forEach((elm) => areasToPost.push(elm.value));
     console.log(checkedAreas);
 
+    // capitalize user fullname
+    const userFullname = stringCapitalizeName(form.elements.user_fullname.value);
+    console.log(userFullname);
+
     const url = "https://frontendspring2021-a6f0.restdb.io/rest/userinfo";
 
     const allDataToPost = {
       types: typesToPost,
       games: gamesToPost,
       areas: areasToPost,
-      user_fullname: form.elements.user_fullname.value,
+      user_fullname: userFullname,
       user_mail: form.elements.user_mail.value,
     };
     console.log(allDataToPost);

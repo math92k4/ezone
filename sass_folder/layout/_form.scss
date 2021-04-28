@@ -73,3 +73,15 @@ fieldset {
     background-color: var(--primary-color);
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .formwrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  form {
+    width: 725px;
+  }
+}

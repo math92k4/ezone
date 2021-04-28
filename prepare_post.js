@@ -45,5 +45,8 @@ export function preparePost() {
     console.log(allDataToPost);
 
     post(allDataToPost, url);
+
+    form.reset();
+    form.parentElement.style.display = "none";
   }
 }

@@ -49,50 +49,54 @@
           <div class="fieldset_slider">
             <fieldset id="list_of_gametypes">
               <legend class="fieldset_heading">Genre</legend>
-              <h2>Please select the game-genres you like</h2>
-              <div class="checkbox_container"></div>
+              <div class="flex_top">
+                <h2>Please select the game-genres you like</h2>
+                <div class="checkbox_container"></div>
+              </div>
               <div class="btn_container">
-              <button class="next">Next</button>
+                <button class="next">Next</button>
               </div>
             </fieldset>
 
             <fieldset id="list_of_games">
               <legend class="fieldset_heading">Games</legend>
-              <h2>Please select the games you like</h2>
-              <div class="checkbox_container"></div>
+              <div class="flex_top">
+                <h2>Please select the games you like</h2>
+                <div class="checkbox_container"></div>
+              </div>
               <div class="btn_container">
-              <button class="back">Back</button>
-              <button class="next">Next</button>
+                <button class="back">Back</button>
+                <button class="next">Next</button>
               </div>
             </fieldset>
 
             <fieldset id="list_of_areas">
               <legend class="fieldset_heading">Areas</legend>
-              <h2>Please select the areas you want content on</h2>
-              <div class="checkbox_container"></div>
+              <div class="flex_top">
+                <h2>Please select the areas you want content on</h2>
+                <div class="checkbox_container"></div>
+              </div>
               <div class="btn_container">
-              <button class="back">Back</button>
-              <button class="next">Next</button>
+                <button class="back">Back</button>
+                <button class="next">Next</button>
               </div>
             </fieldset>
 
             <fieldset id="user_information">
-            <legend class="fieldset_heading">Info</legend>
-              <h2 >Please type in your informations</h2>
+              <legend class="fieldset_heading">Info</legend>
+              <h2>Please type in your informations</h2>
               <div class="formcontrol">
                 <div id="user_field">
-                <label for="user_fullname">Full name</label>
-                <input type="text" name="user_fullname" required id="user_fullname" placeholder="Please enter your full name" autocomplete="name"/>
-                <label for="user_mail">Mail</label>
-                <input type="email" name="user_mail" required id="user_mail" placeholder="Please enter your mail" autocomplete="email"/>
-             
-              </div>
+                  <label for="user_fullname">Full name</label>
+                  <input type="text" name="user_fullname" required id="user_fullname" placeholder="Please enter your full name" autocomplete="name" />
+                  <label for="user_mail">Mail</label>
+                  <input type="email" name="user_mail" required id="user_mail" placeholder="Please enter your mail" autocomplete="email" />
+                </div>
               </div>
               <button id="submit_btn">Submit</button>
               <div class="btn_container">
-              <button class="back">Back</button>
+                <button class="back">Back</button>
               </div>
-              
             </fieldset>
           </div>
         </div>
@@ -102,7 +106,7 @@
 
     <template>
       <div class="formcontrol">
-        <input type="checkbox" required />
+        <input type="checkbox" />
         <label for=""></label>
       </div>
     </template>

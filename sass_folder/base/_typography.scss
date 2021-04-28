@@ -2,19 +2,19 @@
 
 @font-face {
   font-family: "sharpiro-bold";
-  src: url("ezone-webfonts/sharpiro-bold.woff2") format("woff2");
+  src: url("/ezone-webfonts/sharpiro-bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "sharpiro-regular";
-  src: url("ezone-webfonts/sharpiro-regular.woff2") format("woff2");
+  src: url("/ezone-webfonts/sharpiro-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "uniform-pro-con-black";
-  src: url("ezone-webfonts/uniform-pro-con-black.woff2") format("woff2");
+  src: url("/ezone-webfonts/uniform-pro-con-black.woff2") format("woff2");
 }
 @font-face {
   font-family: "uniform-pro-con-medium";
-  src: url("ezone-webfonts/uniform-pro-con-medium.woff2") format("woff2");
+  src: url("/ezone-webfonts/uniform-pro-con-medium.woff2") format("woff2");
 }
 
 h1 {
@@ -72,4 +72,18 @@ legend {
   text-align: left;
   font-family: "sharpiro-bold";
   margin-bottom: 0px;
+}
+
+#loading_screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hotpink;
+}
+
+#loading_screen h1 {
+  font-size: 10vw;
+  color: white;
+  width: 100%;
+  text-align: center;
 }

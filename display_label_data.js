@@ -7,21 +7,33 @@ export function setUpForm(types, games, areas) {
     appendData(data.type, typeField);
   });
 
-  const typesNextButton = document.querySelector("#list_of_gametypes .next");
+  areas.forEach((data) => {
+    appendData(data.areas, areaField);
+  });
 
+  const typesNextButton = document.querySelector("#list_of_gametypes .next");
   typesNextButton.addEventListener("click", filterGames);
 
+  //
+  //
+  //
+  //
+  //Closure
   function filterGames() {
+    //empties the container
     gameField.innerHTML = "";
 
+    //makes array of checked "game_types"
     const checkedTypes = document.querySelectorAll("#list_of_gametypes input:checked");
     const checkedTypesArr = [];
     checkedTypes.forEach((elm) => checkedTypesArr.push(elm.value));
 
-    let previousAppendedElm;
-
+    //for each game ------ a bit sweaty
     games.forEach((data) => {
+      let previousAppendedElm;
+      //we loop through for each category / type of the game
       data.type_of_game.forEach((gameType) => {
+        //If the games type is included in the checkedTypesArray, and != the game that is prevously appendended, we append this game
         if (checkedTypesArr.includes(gameType) && previousAppendedElm != data.games) {
           previousAppendedElm = data.games;
           appendData(data.games, gameField);
@@ -29,10 +41,6 @@ export function setUpForm(types, games, areas) {
       });
     });
   }
-
-  areas.forEach((data) => {
-    appendData(data.areas, areaField);
-  });
 }
 
 function appendData(data, field) {

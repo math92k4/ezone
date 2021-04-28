@@ -19,13 +19,12 @@
       }
 
       form {
-        background-color: rgba(23, 21, 43, 0.95);;
+        background-color: rgba(23, 21, 43, 0.95);
         width: 50vw;
-        
       }
 
       .fieldset_container {
-        position: relative; 
+        position: relative;
         width: 100%;
         min-height: 50vh;
         overflow: hidden;
@@ -44,84 +43,78 @@
 
       .checkbox_container {
         display: grid;
-        grid-gap: 40px; 
-        grid-template-columns: 1fr 1fr ;
+        grid-gap: 40px;
+        grid-template-columns: 1fr 1fr;
       }
 
       .formcontrol {
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-gap: 10px;
-    justify-content: left;
-      } 
-
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        justify-content: left;
+      }
 
       input[type="checkbox"] {
         -webkit-appearance: none;
-      appearance: none;
-      background: transparent;
-      border: solid 1px #54536d;
-      border-radius: 20%;
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
+        appearance: none;
+        background: transparent;
+        border: solid 1px #54536d;
+        border-radius: 20%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
       }
 
       input[type="checkbox"]:checked {
-      background: #6e44ff;
-      transition: 0.5s linear;
-      border: solid 1px #6e44ff;
-}
+        background: #6e44ff;
+        transition: 0.5s linear;
+        border: solid 1px #6e44ff;
+      }
 
-input[type="checkbox"]:hover {
-  border-color: #6e44ff;
-}
+      input[type="checkbox"]:hover {
+        border-color: #6e44ff;
+      }
 
-input[type=text] {
-  margin: 20px;
-    border: solid #54536d 0.2px;
-    border-radius: 4px;
-    outline: none !important;
-    color: white; 
-    background: transparent; 
-}
+      input[type="text"] {
+        margin: 20px;
+        border: solid #54536d 0.2px;
+        border-radius: 4px;
+        outline: none !important;
+        color: white;
+        background: transparent;
+      }
 
-input[type=text]:hover {
-  border-color: #6e44ff;
-}
+      input[type="text"]:hover {
+        border-color: #6e44ff;
+      }
 
-input[type=text]:not(:placeholder-shown):invalid {
-    border-color: red;
-}
+      input[type="text"]:not(:placeholder-shown):invalid {
+        border-color: red;
+      }
 
-input[type=text]:valid {
-   border-color: #B2F6B1; 
-}
+      input[type="text"]:valid {
+        border-color: #b2f6b1;
+      }
 
-input[type=email] {
-  margin: 20px;
-    border: solid #54536d 0.2px;
-    border-radius: 4px;
-    outline: none !important;
-    color: white;
-    background: transparent; 
-}
-input[type=email]:hover {
-  border-color: #6e44ff;
-}
+      input[type="email"] {
+        margin: 20px;
+        border: solid #54536d 0.2px;
+        border-radius: 4px;
+        outline: none !important;
+        color: white;
+        background: transparent;
+      }
+      input[type="email"]:hover {
+        border-color: #6e44ff;
+      }
 
-input[type=email]:valid {
-   border-color: #B2F6B1; 
-}
-
-
-
+      input[type="email"]:valid {
+        border-color: #b2f6b1;
+      }
 
       #loading_screen {
         pointer-events: none;
       }
-
-      
     </style>
   </head>
   <body>
@@ -135,7 +128,7 @@ input[type=email]:valid {
             <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
               <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" class="shown">
                 <rect width="87" height="21" rx="10.5" stroke="none" />
-                <rect x="0.5" y="0.5" width="86" height="20" rx="10"  />
+                <rect x="0.5" y="0.5" width="86" height="20" rx="10" />
               </g>
             </svg>
           </div>
@@ -149,9 +142,9 @@ input[type=email]:valid {
           </div>
           <div class="progress_pill" id="pill_3">
             <svg xmlns="http://www.w3.org/2000/svg" width="76.368" height="76.368" viewBox="0 0 76.368 76.368">
-              <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)"  stroke="#fff" stroke-width="1">
+              <g id="Rectangle_155" data-name="Rectangle 155" transform="translate(0 61.518) rotate(-45)" stroke="#fff" stroke-width="1">
                 <rect width="87" height="21" rx="10.5" stroke="none" />
-                <rect x="0.5" y="0.5" width="86" height="20" rx="10"  />
+                <rect x="0.5" y="0.5" width="86" height="20" rx="10" />
               </g>
             </svg>
           </div>
@@ -166,51 +159,49 @@ input[type=email]:valid {
         </div>
         <div class="fieldset_container">
           <div class="fieldset_slider">
-        <fieldset id="list_of_gametypes">
-          <legend class="fieldset_heading">What types of games do you play?</legend>
-          <div class="checkbox_container"></div>
-          <button class="next">Next</button>
-        </fieldset>
-       
+            <fieldset id="list_of_gametypes">
+              <legend class="fieldset_heading">What types of games do you play?</legend>
+              <div class="checkbox_container"></div>
+              <button class="next">Next</button>
+            </fieldset>
 
-        <fieldset id="list_of_games">
-          <legend class="fieldset_heading">What games do you play?</legend>
-          <div class="checkbox_container"></div>
-          <button class="back">Back</button>
-          <button class="next">Next</button>
-        </fieldset>
+            <fieldset id="list_of_games">
+              <legend class="fieldset_heading">What games do you play?</legend>
+              <div class="checkbox_container"></div>
+              <button class="back">Back</button>
+              <button class="next">Next</button>
+            </fieldset>
 
-        <fieldset id="list_of_areas">
-          <legend class="fieldset_heading">What subjects do you want content on?</legend>
-          <div class="checkbox_container"></div>
-          <button class="back">Back</button>
-          <button class="next">Next</button>
-        </fieldset>
+            <fieldset id="list_of_areas">
+              <legend class="fieldset_heading">What subjects do you want content on?</legend>
+              <div class="checkbox_container"></div>
+              <button class="back">Back</button>
+              <button class="next">Next</button>
+            </fieldset>
 
-        <fieldset id="user_information">
-          <legend class="fieldset_heading">Please type in your informations</legend>
-          <div class="formcontrol">
-          <label for="user_fullname">Fullname</label>
-          <input type="text" name="user_fullname" required id="user_fullname" placeholder="Please enter your full name"/>
-          <label for="user_mail">Mail</label>
-          <input type="email" name="user_mail" required id="user_mail" placeholder="Please enter your mail"/>
+            <fieldset id="user_information">
+              <legend class="fieldset_heading">Please type in your informations</legend>
+              <div class="formcontrol">
+                <label for="user_fullname">Fullname</label>
+                <input type="text" name="user_fullname" required id="user_fullname" placeholder="Please enter your full name" />
+                <label for="user_mail">Mail</label>
+                <input type="email" name="user_mail" required id="user_mail" placeholder="Please enter your mail" />
+              </div>
+              <button class="back">Back</button>
+              <button id="submit_btn">Submit</button>
+            </fieldset>
           </div>
-          <button class="back">Back</button>
-          <button id="submit_btn">Submit</button>
-        </fieldset>
-        
-</div>
         </div>
       </form>
     </div>
     <div id="loading_screen"></div>
 
     <template>
-            <div class="formcontrol">
-              <input type="checkbox" />
-              <label for=""></label>
-            </div>
-          </template>
+      <div class="formcontrol">
+        <input type="checkbox" required />
+        <label for=""></label>
+      </div>
+    </template>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

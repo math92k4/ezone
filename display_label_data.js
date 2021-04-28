@@ -1,10 +1,6 @@
 export function setUpForm(types, games, areas) {
-  const typeField = document.querySelector(
-    "#list_of_gametypes .checkbox_container"
-  );
-  const gameField = document.querySelector(
-    "#list_of_games .checkbox_container"
-  );
+  const typeField = document.querySelector("#list_of_gametypes .checkbox_container");
+  const gameField = document.querySelector("#list_of_games .checkbox_container");
   const areaField = document.querySelector("#list_of_areas .checkbox_container");
 
   types.forEach((data) => {
@@ -13,34 +9,25 @@ export function setUpForm(types, games, areas) {
 
   const typesNextButton = document.querySelector("#list_of_gametypes .next");
 
-  typesNextButton.addEventListener("click", filterGames); 
+  typesNextButton.addEventListener("click", filterGames);
 
-function filterGames() {
+  function filterGames() {
+    gameField.innerHTML = "";
 
-  gameField.innerHTML = ""; 
+    const checkedTypes = document.querySelectorAll("#list_of_gametypes input:checked");
+    const checkedTypesArr = [];
+    checkedTypes.forEach((elm) => checkedTypesArr.push(elm.value));
 
-  const checkedTypes = document.querySelectorAll(
-  "#list_of_gametypes input:checked"
-  );
-  const checkedTypesArr = []; 
-  checkedTypes.forEach((elm) => checkedTypesArr.push(elm.value));
-
-let previousAppendedElm; 
+    let previousAppendedElm;
 
     games.forEach((data) => {
-
       data.type_of_game.forEach((gameType) => {
-        if (checkedTypesArr.includes(gameType) && previousAppendedElm!= data.games) {
-          previousAppendedElm = data.games; 
+        if (checkedTypesArr.includes(gameType) && previousAppendedElm != data.games) {
+          previousAppendedElm = data.games;
           appendData(data.games, gameField);
         }
       });
-        
-      })
-
-
-
-
+    });
   }
 
   areas.forEach((data) => {
@@ -57,6 +44,7 @@ function appendData(data, field) {
   label.textContent = data;
   label.setAttribute("for", data);
   input.setAttribute("name", data);
+  input.setAttribute("id", data);
   input.setAttribute("value", data);
 
   field.appendChild(clone);

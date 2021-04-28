@@ -1,0 +1,7 @@
+@use "../abstracts/variables";
+
+body {
+    background-color: var(--bg-color);
+    background-image: url(imgs/screenshot.png);
+    background-size: cover;
+}

@@ -1,0 +1,89 @@
+@use "../abstracts/variables";
+
+
+
+input {
+//input text
+&[type="text"] {
+        width: 400px;
+        padding: 10px 20px 10px 20px;
+        border: solid #54536d 0.2px;
+        border-radius: 4px;
+        outline: none !important;
+        color: white;
+        background: transparent;
+        font-size: 16px;
+
+}
+&[type="text"]:hover {
+  border-color: #6e44ff;
+}
+
+&[type="text"]:focus {
+  border-color: #6e44ff;
+}
+
+&[type="text"]:not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+&[type="text"]:valid {
+  border-color: #b2f6b1;
+}
+
+//input email
+&[type="email"] {
+  padding: 10px 20px 10px 20px;
+        border: solid #54536d 0.2px;
+        border-radius: 4px;
+        outline: none !important;
+        color: white;
+        background: transparent;
+        font-size: 16px;
+}
+
+&[type="email"]:hover {
+  border-color: #6e44ff;
+}
+
+&[type="email"]:focus {
+  border-color: #6e44ff;
+}
+
+&[type="email"]:not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+&[type="email"]:valid {
+  border-color: #b2f6b1;
+}
+
+
+//input checkbox
+&[type="checkbox"] {
+  -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        border: solid 1px #54536d;
+        border-radius: 20%;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+}
+
+&[type="checkbox"]:hover {
+border-color: #6e44ff;
+}
+
+&[type="checkbox"]:checked {
+  background: #6e44ff;
+        transition: 0.5s linear;
+        border: solid 1px #6e44ff;
+}
+}
+
+#user_field {
+  & label {
+    margin: 40px 0px 10px 0px;
+  }
+}

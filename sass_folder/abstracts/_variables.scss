@@ -1,8 +1,17 @@
 :root {
   --primary-color: #ffc3a4;
-  --font-color: #fff;
-  --accent: #abf49d;
-  --grid-btn-background: transparent;
-  --bg-color: #16152b;
-  --heading-color: #ffc3a4;
+    --font-color: #fff;
+    --bg-color: #16152b;
+    --piece-bg: rgba(17,15,27,0.9);
+    --piece-header-bg: #1d1b38;
+    --heading-color: #ffc3a4;
+    --heading-color-animate: #4508d6;
+    --button-fill: #292845;
+    --tint: #54536d;
+    --accent: #abf49d;
+    --filter-bg: rgba(22,21,43,0.95);
+    --pill-fill2: #6e44ff;
+    --pill-fill1: #292744;
+    --grid-btn-background: transparent;
+    --filter-fade: linear-gradient(180deg,rgba(22,21,43,0),#16152b);
 }

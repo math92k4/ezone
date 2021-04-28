@@ -6,9 +6,11 @@
 
 .progress_pill {
     fill: transparent; 
+    stroke-width: 0;
       &  .shown {
+        stroke: transparent; 
         fill: #B2F6B1; 
-        transition: fill 3s linear;
+        transition: fill 1s linear;
       }}
 
 

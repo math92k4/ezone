@@ -5,120 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ezone</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-      }
-
-      .formwrapper {
-        min-height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: row-reverse;
-      }
-
-      form {
-        background-color: rgba(23, 21, 43, 0.95);
-        width: 50vw;
-      }
-
-      .fieldset_container {
-        position: relative;
-        width: 100%;
-        min-height: 50vh;
-        overflow: hidden;
-      }
-
-      .fieldset_slider {
-        display: flex;
-        transform: translateX(var(--slide-distance));
-        transition: transform 1s ease-in;
-      }
-
-      fieldset {
-        border: none;
-        width: 100%;
-      }
-
-      .checkbox_container {
-        display: grid;
-        grid-gap: 40px;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .formcontrol {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 10px;
-        justify-content: left;
-      }
-
-      input[type="checkbox"] {
-        -webkit-appearance: none;
-        appearance: none;
-        background: transparent;
-        border: solid 1px #54536d;
-        border-radius: 20%;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-      }
-
-      input[type="checkbox"]:checked {
-        background: #6e44ff;
-        transition: 0.5s linear;
-        border: solid 1px #6e44ff;
-      }
-
-      input[type="checkbox"]:hover {
-        border-color: #6e44ff;
-      }
-
-      input[type="text"] {
-        margin: 20px;
-        border: solid #54536d 0.2px;
-        border-radius: 4px;
-        outline: none !important;
-        color: white;
-        background: transparent;
-      }
-
-      input[type="text"]:hover {
-        border-color: #6e44ff;
-      }
-
-      input[type="text"]:not(:placeholder-shown):invalid {
-        border-color: red;
-      }
-
-      input[type="text"]:valid {
-        border-color: #b2f6b1;
-      }
-
-      input[type="email"] {
-        margin: 20px;
-        border: solid #54536d 0.2px;
-        border-radius: 4px;
-        outline: none !important;
-        color: white;
-        background: transparent;
-      }
-      input[type="email"]:hover {
-        border-color: #6e44ff;
-      }
-
-      input[type="email"]:valid {
-        border-color: #b2f6b1;
-      }
-
-      #loading_screen {
-        pointer-events: none;
-      }
-    </style>
   </head>
   <body>
-    <h1>HELLO</h1>
     <button id="cta_btn"></button>
     <div class="formwrapper">
       <form>
@@ -160,35 +48,51 @@
         <div class="fieldset_container">
           <div class="fieldset_slider">
             <fieldset id="list_of_gametypes">
-              <legend class="fieldset_heading">What types of games do you play?</legend>
+              <legend class="fieldset_heading">Genre</legend>
+              <h2>Please select the game-genres you like</h2>
               <div class="checkbox_container"></div>
+              <div class="btn_container">
               <button class="next">Next</button>
+              </div>
             </fieldset>
 
             <fieldset id="list_of_games">
-              <legend class="fieldset_heading">What games do you play?</legend>
+              <legend class="fieldset_heading">Games</legend>
+              <h2>Please select the games you like</h2>
               <div class="checkbox_container"></div>
+              <div class="btn_container">
               <button class="back">Back</button>
               <button class="next">Next</button>
+              </div>
             </fieldset>
 
             <fieldset id="list_of_areas">
-              <legend class="fieldset_heading">What subjects do you want content on?</legend>
+              <legend class="fieldset_heading">Areas</legend>
+              <h2>Please select the areas you want content on</h2>
               <div class="checkbox_container"></div>
+              <div class="btn_container">
               <button class="back">Back</button>
               <button class="next">Next</button>
+              </div>
             </fieldset>
 
             <fieldset id="user_information">
-              <legend class="fieldset_heading">Please type in your informations</legend>
+            <legend class="fieldset_heading">Info</legend>
+              <h2 >Please type in your informations</h2>
               <div class="formcontrol">
-                <label for="user_fullname">Fullname</label>
-                <input type="text" name="user_fullname" required id="user_fullname" placeholder="Please enter your full name" />
+                <div id="user_field">
+                <label for="user_fullname">Full name</label>
+                <input type="text" name="user_fullname" required id="user_fullname" placeholder="Please enter your full name" autocomplete="name"/>
                 <label for="user_mail">Mail</label>
-                <input type="email" name="user_mail" required id="user_mail" placeholder="Please enter your mail" />
+                <input type="email" name="user_mail" required id="user_mail" placeholder="Please enter your mail" autocomplete="email"/>
+             
               </div>
-              <button class="back">Back</button>
+              </div>
               <button id="submit_btn">Submit</button>
+              <div class="btn_container">
+              <button class="back">Back</button>
+              </div>
+              
             </fieldset>
           </div>
         </div>

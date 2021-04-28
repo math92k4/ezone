@@ -3,3 +3,8 @@
 @use "./components";
 @use "./layout";
 @use "./themes";
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+      }
